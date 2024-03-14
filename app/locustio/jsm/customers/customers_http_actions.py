@@ -43,8 +43,8 @@ def customer_login_and_view_portals(locust):
     body = params.login_body
     body['os_username'] = user[0]
     body['os_password'] = user[1]
-    locust.session_data_storage['username'] = user[0]
-    locust.session_data_storage['password'] = user[1]
+    locust.session_data_storage['username'] = 'admin'
+    locust.session_data_storage['password'] = 'admin'
 
     r = locust.post('/servicedesk/customer/user/login', body, TEXT_HEADERS, catch_response=True)
 
