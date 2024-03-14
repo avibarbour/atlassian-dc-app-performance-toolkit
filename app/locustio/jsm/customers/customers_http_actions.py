@@ -41,8 +41,8 @@ def customer_login_and_view_portals(locust):
     locust.session_data_storage['rt_id'] = request_types[2]
 
     body = params.login_body
-    body['os_username'] = user[0]
-    body['os_password'] = user[1]
+    body['os_username'] = 'admin'
+    body['os_password'] = 'admin'
     locust.session_data_storage['username'] = 'admin'
     locust.session_data_storage['password'] = 'admin'
 
